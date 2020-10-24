@@ -1,0 +1,1751 @@
+asd
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/css/media.css b/css/media.css
+new file mode 100644
+index 0000000..6ad3ce9
+--- /dev/null
++++ b/css/media.css
+@@ -0,0 +1,112 @@
++@media (max-width: 1024px) {
++.users-box {
++	padding-left: 20px;
++}
++
++.user-box__message {
++	padding: 15px 10px;
++}
++.marketing__inner-images .center-img {
++	position: inherit;
++	margin-top: 0;
++}
++}
++@media(max-width: 890px) {
++	.thread {
++		width: 50%;
++		margin-left: 20px;
++	}
++	.chat__section {
++		flex-wrap: wrap;
++	}
++	.users-box__card + .users-box__card {
++		margin-top: 30px;
++	}
++	.users-box {
++		padding-bottom: 0;
++	}
++	.thread-first {
++		margin-bottom: 30px;
++	}
++	.marketing__inner {
++		padding-bottom: 30px;
++	}
++	.marketing__inner-images {
++		display: none;
++	}
++	.marketing-start {
++		margin-top: 0;
++		padding-top: 30px;
++	}
++}
++
++@media(max-width: 720px) {
++	.marketing-start .lines {
++		display: none;
++	}
++	.marketing-start span {
++		margin-bottom: 30px;
++	}
++	.marketing-start {
++		text-align: center;
++		display: flex;
++		flex-direction: column;
++		justify-content: center;
++	}
++}
++@media(max-width: 610px) {
++	.users-box {
++		padding: 5px;
++	}
++	.user-box__message {
++		display: flex;
++		flex-direction: column;
++	}
++	.dismiss__btn {
++		margin-left: 100px;
++	}
++}
++@media (max-width: 680px) {
++	.header__list {
++		flex-wrap: wrap;
++		justify-content: center;
++	}
++	.header__logo {
++		width: 100%;
++		margin-right: 0;
++	}
++}
++
++@media(max-width: 660px) {
++	.header__about-inner {
++		padding: 10px 30px;
++	}
++	.header__about-text {
++		width: auto;
++	}
++	.header__about-list {
++		display: none;
++	}
++	.header__about-input {
++		margin-bottom: 30px;
++	}
++
++}
++
++@media(max-width: 580px) {
++	.dismiss__btn {
++		margin-left: 50px;
++	}
++}
++@media(max-width: 320px) {
++	.header__about-inner {
++		padding: 10px;
++	}
++	.header__about-title {
++		font-size: 45px;
++	}
++	.header__about-input {
++		width: 100%;
++		padding: 10px;
++	}
++}
+\ No newline at end of file
+diff --git a/css/normalize.css b/css/normalize.css
+new file mode 100644
+index 0000000..192eb9c
+--- /dev/null
++++ b/css/normalize.css
+@@ -0,0 +1,349 @@
++/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
++
++/* Document
++   ========================================================================== */
++
++/**
++ * 1. Correct the line height in all browsers.
++ * 2. Prevent adjustments of font size after orientation changes in iOS.
++ */
++
++html {
++  line-height: 1.15; /* 1 */
++  -webkit-text-size-adjust: 100%; /* 2 */
++}
++
++/* Sections
++   ========================================================================== */
++
++/**
++ * Remove the margin in all browsers.
++ */
++
++body {
++  margin: 0;
++}
++
++/**
++ * Render the `main` element consistently in IE.
++ */
++
++main {
++  display: block;
++}
++
++/**
++ * Correct the font size and margin on `h1` elements within `section` and
++ * `article` contexts in Chrome, Firefox, and Safari.
++ */
++
++h1 {
++  font-size: 2em;
++  margin: 0.67em 0;
++}
++
++/* Grouping content
++   ========================================================================== */
++
++/**
++ * 1. Add the correct box sizing in Firefox.
++ * 2. Show the overflow in Edge and IE.
++ */
++
++hr {
++  box-sizing: content-box; /* 1 */
++  height: 0; /* 1 */
++  overflow: visible; /* 2 */
++}
++
++/**
++ * 1. Correct the inheritance and scaling of font size in all browsers.
++ * 2. Correct the odd `em` font sizing in all browsers.
++ */
++
++pre {
++  font-family: monospace, monospace; /* 1 */
++  font-size: 1em; /* 2 */
++}
++
++/* Text-level semantics
++   ========================================================================== */
++
++/**
++ * Remove the gray background on active links in IE 10.
++ */
++
++a {
++  background-color: transparent;
++}
++
++/**
++ * 1. Remove the bottom border in Chrome 57-
++ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
++ */
++
++abbr[title] {
++  border-bottom: none; /* 1 */
++  text-decoration: underline; /* 2 */
++  text-decoration: underline dotted; /* 2 */
++}
++
++/**
++ * Add the correct font weight in Chrome, Edge, and Safari.
++ */
++
++b,
++strong {
++  font-weight: bolder;
++}
++
++/**
++ * 1. Correct the inheritance and scaling of font size in all browsers.
++ * 2. Correct the odd `em` font sizing in all browsers.
++ */
++
++code,
++kbd,
++samp {
++  font-family: monospace, monospace; /* 1 */
++  font-size: 1em; /* 2 */
++}
++
++/**
++ * Add the correct font size in all browsers.
++ */
++
++small {
++  font-size: 80%;
++}
++
++/**
++ * Prevent `sub` and `sup` elements from affecting the line height in
++ * all browsers.
++ */
++
++sub,
++sup {
++  font-size: 75%;
++  line-height: 0;
++  position: relative;
++  vertical-align: baseline;
++}
++
++sub {
++  bottom: -0.25em;
++}
++
++sup {
++  top: -0.5em;
++}
++
++/* Embedded content
++   ========================================================================== */
++
++/**
++ * Remove the border on images inside links in IE 10.
++ */
++
++img {
++  border-style: none;
++}
++
++/* Forms
++   ========================================================================== */
++
++/**
++ * 1. Change the font styles in all browsers.
++ * 2. Remove the margin in Firefox and Safari.
++ */
++
++button,
++input,
++optgroup,
++select,
++textarea {
++  font-family: inherit; /* 1 */
++  font-size: 100%; /* 1 */
++  line-height: 1.15; /* 1 */
++  margin: 0; /* 2 */
++}
++
++/**
++ * Show the overflow in IE.
++ * 1. Show the overflow in Edge.
++ */
++
++button,
++input { /* 1 */
++  overflow: visible;
++}
++
++/**
++ * Remove the inheritance of text transform in Edge, Firefox, and IE.
++ * 1. Remove the inheritance of text transform in Firefox.
++ */
++
++button,
++select { /* 1 */
++  text-transform: none;
++}
++
++/**
++ * Correct the inability to style clickable types in iOS and Safari.
++ */
++
++button,
++[type="button"],
++[type="reset"],
++[type="submit"] {
++  -webkit-appearance: button;
++}
++
++/**
++ * Remove the inner border and padding in Firefox.
++ */
++
++button::-moz-focus-inner,
++[type="button"]::-moz-focus-inner,
++[type="reset"]::-moz-focus-inner,
++[type="submit"]::-moz-focus-inner {
++  border-style: none;
++  padding: 0;
++}
++
++/**
++ * Restore the focus styles unset by the previous rule.
++ */
++
++button:-moz-focusring,
++[type="button"]:-moz-focusring,
++[type="reset"]:-moz-focusring,
++[type="submit"]:-moz-focusring {
++  outline: 1px dotted ButtonText;
++}
++
++/**
++ * Correct the padding in Firefox.
++ */
++
++fieldset {
++  padding: 0.35em 0.75em 0.625em;
++}
++
++/**
++ * 1. Correct the text wrapping in Edge and IE.
++ * 2. Correct the color inheritance from `fieldset` elements in IE.
++ * 3. Remove the padding so developers are not caught out when they zero out
++ *    `fieldset` elements in all browsers.
++ */
++
++legend {
++  box-sizing: border-box; /* 1 */
++  color: inherit; /* 2 */
++  display: table; /* 1 */
++  max-width: 100%; /* 1 */
++  padding: 0; /* 3 */
++  white-space: normal; /* 1 */
++}
++
++/**
++ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
++ */
++
++progress {
++  vertical-align: baseline;
++}
++
++/**
++ * Remove the default vertical scrollbar in IE 10+.
++ */
++
++textarea {
++  overflow: auto;
++}
++
++/**
++ * 1. Add the correct box sizing in IE 10.
++ * 2. Remove the padding in IE 10.
++ */
++
++[type="checkbox"],
++[type="radio"] {
++  box-sizing: border-box; /* 1 */
++  padding: 0; /* 2 */
++}
++
++/**
++ * Correct the cursor style of increment and decrement buttons in Chrome.
++ */
++
++[type="number"]::-webkit-inner-spin-button,
++[type="number"]::-webkit-outer-spin-button {
++  height: auto;
++}
++
++/**
++ * 1. Correct the odd appearance in Chrome and Safari.
++ * 2. Correct the outline style in Safari.
++ */
++
++[type="search"] {
++  -webkit-appearance: textfield; /* 1 */
++  outline-offset: -2px; /* 2 */
++}
++
++/**
++ * Remove the inner padding in Chrome and Safari on macOS.
++ */
++
++[type="search"]::-webkit-search-decoration {
++  -webkit-appearance: none;
++}
++
++/**
++ * 1. Correct the inability to style clickable types in iOS and Safari.
++ * 2. Change font properties to `inherit` in Safari.
++ */
++
++::-webkit-file-upload-button {
++  -webkit-appearance: button; /* 1 */
++  font: inherit; /* 2 */
++}
++
++/* Interactive
++   ========================================================================== */
++
++/*
++ * Add the correct display in Edge, IE 10+, and Firefox.
++ */
++
++details {
++  display: block;
++}
++
++/*
++ * Add the correct display in all browsers.
++ */
++
++summary {
++  display: list-item;
++}
++
++/* Misc
++   ========================================================================== */
++
++/**
++ * Add the correct display in IE 10+.
++ */
++
++template {
++  display: none;
++}
++
++/**
++ * Add the correct display in IE 10.
++ */
++
++[hidden] {
++  display: none;
++}
+diff --git a/css/slick.css b/css/slick.css
+new file mode 100644
+index 0000000..57477e8
+--- /dev/null
++++ b/css/slick.css
+@@ -0,0 +1,119 @@
++/* Slider */
++.slick-slider
++{
++    position: relative;
++
++    display: block;
++    box-sizing: border-box;
++
++    -webkit-user-select: none;
++       -moz-user-select: none;
++        -ms-user-select: none;
++            user-select: none;
++
++    -webkit-touch-callout: none;
++    -khtml-user-select: none;
++    -ms-touch-action: pan-y;
++        touch-action: pan-y;
++    -webkit-tap-highlight-color: transparent;
++}
++
++.slick-list
++{
++    position: relative;
++
++    display: block;
++    overflow: hidden;
++
++    margin: 0;
++    padding: 0;
++}
++.slick-list:focus
++{
++    outline: none;
++}
++.slick-list.dragging
++{
++    cursor: pointer;
++    cursor: hand;
++}
++
++.slick-slider .slick-track,
++.slick-slider .slick-list
++{
++    -webkit-transform: translate3d(0, 0, 0);
++       -moz-transform: translate3d(0, 0, 0);
++        -ms-transform: translate3d(0, 0, 0);
++         -o-transform: translate3d(0, 0, 0);
++            transform: translate3d(0, 0, 0);
++}
++
++.slick-track
++{
++    position: relative;
++    top: 0;
++    left: 0;
++
++    display: block;
++    margin-left: auto;
++    margin-right: auto;
++}
++.slick-track:before,
++.slick-track:after
++{
++    display: table;
++
++    content: '';
++}
++.slick-track:after
++{
++    clear: both;
++}
++.slick-loading .slick-track
++{
++    visibility: hidden;
++}
++
++.slick-slide
++{
++    display: none;
++    float: left;
++
++    height: 100%;
++    min-height: 1px;
++}
++[dir='rtl'] .slick-slide
++{
++    float: right;
++}
++.slick-slide img
++{
++    display: block;
++}
++.slick-slide.slick-loading img
++{
++    display: none;
++}
++.slick-slide.dragging img
++{
++    pointer-events: none;
++}
++.slick-initialized .slick-slide
++{
++    display: block;
++}
++.slick-loading .slick-slide
++{
++    visibility: hidden;
++}
++.slick-vertical .slick-slide
++{
++    display: block;
++
++    height: auto;
++
++    border: 1px solid transparent;
++}
++.slick-arrow.slick-hidden {
++    display: none;
++}
+diff --git a/css/style.css b/css/style.css
+new file mode 100644
+index 0000000..8098321
+--- /dev/null
++++ b/css/style.css
+@@ -0,0 +1,528 @@
++html {
++	box-sizing: border-box;
++} 
++
++*,*::before,*::after {
++	box-sizing: inherit;
++}
++* {
++	padding: 0;
++	margin: 0;
++}
++a {
++	text-decoration: none;
++	color: inherit;
++	display: inline-block;
++}
++
++ul,
++li {
++	margin: 0;
++	padding: 0;
++	list-style: none;
++}
++
++h1,h2,h3,h4,h5,h6 {
++	margin: 0;
++}
++p {
++	margin: 0;
++	padding: 0;
++}
++
++
++body {
++	color: #2F3835;
++	font-size: 20px;
++	line-height: 24px;
++	font-weight: 400;
++	overflow-x: hidden;
++	min-width: 320px;
++}
++
++.wrapper {
++	position: relative;
++	min-height: 100%;
++	overflow: hidden;
++}
++
++.container {
++	max-width: 1200px;
++	padding: 0 30px;
++	margin: 0 auto;
++}
++.header {
++	background-image: url('../img/header-bg.jpg');
++	background-repeat: no-repeat;
++	background-size: cover;
++	padding-top: 30px;
++}
++
++.header__inner {
++	position: relative;
++	display: flex;
++	flex-direction: column;
++	justify-content: space-between;
++}
++
++.header__list {
++	height: 60px;
++	position: relative;
++	display: flex;
++	align-items: center;
++
++}
++
++.header__list-item {
++	font-weight: normal;
++	font-size: 18px;
++	line-height: 25px;
++	font-family: 'Paytone One', sans-serif;
++	color: #FFFFFF;
++	margin-right: 30px;
++	padding: 5px 0;
++	text-transform: uppercase;
++	transition: .3s;
++}
++.header__list-item:hover {
++	color: #FF1640;
++	transition: .3s;
++}
++.header__logo.header__list-item:hover {
++	color: #fff !important;
++	transition: .2s;
++}
++
++.header__logo {
++	position: relative;
++	display: flex;
++	justify-content: center;
++	align-items: center;
++	margin-right: 70px;
++	background-size: cover;
++	width: 140px;
++	height: 60px;
++	font-weight: normal;
++	font-size: 25px;
++	line-height: 35px;
++	color: #FFFFFF;
++}
++
++.header__logo-link {
++	display: flex;
++	justify-content: center;
++	align-items: center;
++}
++
++.header__logo-link img {
++	position: absolute;
++	top: 0;
++
++}
++.header__logo-link span {
++	margin-right: 15px;
++	margin-top: -3px;
++	z-index: 10;
++}
++
++.header__about {
++	width: 87%;
++	margin: 0 auto;
++	margin-top: 71px;
++	background: rgba(0,0,0,0.5);
++}
++
++.header__about-inner {
++	padding-top: 10px;
++	padding-left: 45px;
++}
++.header__about-title {
++	font-weight: normal;
++	font-family: 'Paytone One', sans-serif;
++	font-size: 64px;
++	line-height: 89px;
++	color: #FFFFFF;
++	text-transform: uppercase;
++}
++.header__about-info {
++	font-family: 'Paytone One', sans-serif;
++	font-weight: normal;
++	font-size: 20px;
++	line-height: 28px;
++	color: #FFFFFF;
++	margin-bottom: 30px;
++}
++.header__about-text {
++	font-weight: normal;
++	font-size: 18px;
++	line-height:27px;
++	font-family: 'Segoe UI Regular';
++	color: #FFFFFF;
++	width: 432px;
++	margin-bottom: 30px;
++}
++.header__about-input {
++	border: 2px solid rgba(255, 255, 255, 0.4);
++	box-sizing: border-box;
++	border-radius: 50px;
++	padding: 10px 30px;
++	margin-right: 20px;
++	width: 300px;
++	background: transparent;
++	font-size: 14px;
++	line-height: 18px;
++	color: rgba(255, 255, 255, 0.4);
++	outline: none;
++}
++
++.header__about-input::placeholder {
++	font-family: 'Pavanam', sans-serif;
++}
++
++.header__about-btn {
++	border: 2px solid #FF1640;
++	box-sizing: border-box;
++	border-radius: 50px;
++	font-size: 14px;
++	line-height: 18px;
++	color: rgba(255, 255, 255, 0.4);
++	background: transparent;
++	padding: 10px 20px;
++	cursor: pointer;
++	outline: none;
++	margin-bottom: 83px;
++}
++.header__about-list {
++	display: flex;
++	justify-content: space-around;
++	align-items: center;
++	padding-top: 37px;
++	border-top: 1px solid rgba(255, 255, 255, 0.2);
++}
++
++.marketing {
++	position: relative;
++	background-image: url('../img/marketing-bg.png');
++}
++.marketing__inner {
++	width: 87%;
++	margin: 0 auto;
++	background:#2C2828;
++}
++.marketing__inner-images {
++	display: flex;
++	justify-content: space-around;
++	padding-top: 100px;
++}
++.marketing__inner-img {
++	text-align: center;
++}
++
++.marketing__inner-images .center-img {
++	position: absolute;
++	margin-top: -50px;
++}
++.marketing__inner-images .left-img {
++	margin-left:-20px ;
++}
++.marketing-start {
++	margin-top: 60px;
++	display: flex;
++	align-items: center;
++	justify-content: center;
++}
++.marketing-start span {
++	font-size: 25px;
++	line-height: 35px;
++	color: #FFFFFF;
++	font-family: 'Paytone One', sans-serif;
++	margin-right: 6px;
++	text-transform: uppercase;
++}
++.lines {
++	margin-right: 10px;
++}
++.marketing__btn {
++	display: flex;
++	align-items: center;
++	padding: 7px 16px;
++	background: linear-gradient(180deg, #864A23 0%, #6A3A1B 100%);
++	border-radius: 20px;
++	border: none;
++	font-weight: 600;
++	font-size: 14px;
++	line-height: 21px;
++	color: #FFFFFF;
++	font-family: 'Segoe UI Regular';
++	cursor: pointer;
++	outline: none;
++}
++.marketing__btn img {
++	margin-right: 5px;
++}
++
++.chat__section {
++	margin-top: 60px;
++	display: flex;
++	justify-content: space-between;
++}
++
++.users-box {
++	display: flex;
++	position: relative;
++	flex-direction: column;
++	padding-bottom: 100px;
++	padding-left: 76px;
++}
++.users-box__card + .users-box__card {
++	margin-top: 90px;
++}
++.user-box__message {
++	margin-top: 30px;
++	background-image: url('../img/card-bg.png');
++	padding: 20px 26px;
++	display: flex;
++	justify-content: space-between;
++}
++.user-box__card-buttons {
++	display: flex;
++	justify-content: space-between;
++	align-items: center;
++}
++.notifications {
++	position: relative;
++	font-weight: bold;
++	font-size: 18px;
++	line-height: 149.8%;
++	font-family: 'Segoe UI Regular',sans-serif;
++	color: #FFFFFF;
++}
++.dismiss__btn {
++	display: flex;
++	align-items: center;
++	font-weight: 600;
++	font-size: 16px;
++	line-height: 149.8%;
++	color: #2D2828;
++	padding: 5px 12px;
++	background: #C4C4C4;
++	border-radius: 50px;
++	border: none;
++	cursor: pointer;
++	outline: none;
++}
++.dismiss__btn img {
++	margin-right: 5px;
++}
++.notifications::before {
++	content: '1';
++	display: inlne-block;
++	font-weight: normal;
++	font-size: 18px;
++	line-height: 149.8%;
++	color: #FFFFFF;
++	padding: 10px;
++	border-radius: 50%;
++	background: #FF1640;
++	margin-right: 10px;
++}
++
++.user-info {
++	display: flex;
++	flex-wrap: wrap;
++	margin-right: 30px;
++}
++.user-info__name {
++	font-family: 'Segoe UI Regular',sans-serif;
++}
++.user-img {
++	margin-right: 17px;
++}
++.user-info__img {
++	position: relative;
++	height: 60px;
++}
++
++.user-imgicon {
++	position: absolute;
++	left: 36px;
++	bottom: 0;
++}
++.user-name {
++	display: block;
++	font-weight: bold;
++	font-size: 18px;
++	line-height: 27px;
++	color: #2D2828;
++}
++.user-onlinetime {
++	font-size: 18px;
++	line-height:27px;
++	color: rgba(45, 40, 40, 0.7);
++}
++
++.user-message__title {
++	font-weight: bold;
++	font-size: 22px;
++	line-height:33px;
++	color: #2D2828;
++	font-family: 'Segoe UI Regular';
++	margin-bottom: 11px;
++}
++
++.user-message__text {
++	font-weight: normal;
++	font-size: 14px;
++	line-height: 21px;
++	color: #2D2828;
++	width: 250px;
++}
++
++.notifications__2::before {
++	display: none;
++}
++
++.toggle {
++	width: 50px;
++	height: 30px;
++	display: flex;
++	align-items: center;
++	background: #FF1640;
++	border-radius: 20px;
++	position: relative;
++	padding: 1px;
++	margin-left: 10px;
++}
++.toggle-btn {
++	border-radius: 50%;
++	background: #fff;
++	margin-left: auto;
++	width: 27px;
++	height: 27px;
++}
++
++.thread {
++	width: 40%;
++	padding-top: 60px;
++}
++.thread h4 {
++	font-weight: 600;
++	font-size: 22px;
++	line-height: 33px;
++	color: #FFFFFF;
++	font-family: 'Segoe UI Regular';
++	opacity: 0.7;
++}
++.thread p {
++	font-weight: normal;
++	font-size: 14px;
++	line-height:21px;
++	font-family: 'Segoe UI Regular';
++	color: #FFFFFF;
++	opacity: 0.7;
++	width: 300px;
++}
++
++.thread-first {
++	margin-bottom: 150px;
++}
++.brands {
++	padding: 30px 70px;
++}
++.collegues {
++	display: flex;
++	justify-content: center;
++}
++.brands-logos {
++	display: flex;
++	justify-content: space-around;
++	align-items: center;
++
++}
++
++.collegue {
++	width: 260px;
++}
++.collegue+ .collegue {
++	margin-left: 50px;
++}
++.collegue-header {
++	display: flex;
++	align-items: center;
++	margin-bottom: 25px;
++}
++.collegue-header img+img {
++	margin-left: 16px;
++}
++
++.collegue-info p {
++	font-style: normal;
++	font-weight: 600;
++	font-size: 18px;
++	line-height: 27px;
++	font-family: 'Segoe UI Regular';
++	color: #000000;
++}
++
++.brand{
++	margin-left: -20px !important;
++}
++
++.footer {
++	padding: 60px 60px 150px 60px;
++	background-color: #c0c0c0;
++	display: flex;
++	align-items: flex-start;
++	background-image: url('../img/footer-bg.png');
++	background-repeat: no-repeat;
++	background-size: cover;
++	background-position-y:-90px; 
++}
++
++.footer__title {
++	display: inline-block;
++	font-size: 45px;
++	line-height: 63px;
++	color: #fff;
++	font-family: 'Paytone One', sans-serif;
++	margin-right: 149px;
++}
++.footer__list + .footer__list {
++	margin-left: 84px;
++}
++
++.footer__list-title {
++	font-weight: bold;
++	font-size: 18px;
++	font-family: 'Segoe UI Regular';
++	line-height: 27px;
++	color: #fff;
++	margin-bottom: 22px;
++}
++.footer__list-item {
++	font-weight: normal;
++	font-size: 18px;
++	line-height: 27px;
++	color: #fff;
++	margin-bottom: 10px;
++}
++
++.footer__info {
++	margin-left: auto;
++}
++.footer__social {
++	text-align: right;
++	margin-bottom: 14px;
++}
++
++.footer__social img {
++	margin-left: 30px;
++}
++.footer__info-policy {
++	text-align: right;
++	font-weight: bold;
++	font-size: 18px;
++	line-height: 27px;
++	color: #FFFFFF;
++	font-family: 'Segoe UI Regular';
++}
+\ No newline at end of file
+diff --git a/fonts/Segoe UI Bold Italic.woff b/fonts/Segoe UI Bold Italic.woff
+new file mode 100644
+index 0000000..fa45e22
+Binary files /dev/null and b/fonts/Segoe UI Bold Italic.woff differ
+diff --git a/fonts/Segoe UI Bold.woff b/fonts/Segoe UI Bold.woff
+new file mode 100644
+index 0000000..a6b0a97
+Binary files /dev/null and b/fonts/Segoe UI Bold.woff differ
+diff --git a/fonts/Segoe UI Italic.woff b/fonts/Segoe UI Italic.woff
+new file mode 100644
+index 0000000..1649115
+Binary files /dev/null and b/fonts/Segoe UI Italic.woff differ
+diff --git a/fonts/Segoe UI.ttf b/fonts/Segoe UI.ttf
+new file mode 100644
+index 0000000..46b3b99
+Binary files /dev/null and b/fonts/Segoe UI.ttf differ
+diff --git a/fonts/Segoe UI.woff b/fonts/Segoe UI.woff
+new file mode 100644
+index 0000000..a45efa3
+Binary files /dev/null and b/fonts/Segoe UI.woff differ
+diff --git a/fonts/fonts.css b/fonts/fonts.css
+new file mode 100644
+index 0000000..a1f58fb
+--- /dev/null
++++ b/fonts/fonts.css
+@@ -0,0 +1,32 @@
++/* #### Generated By: http://www.cufonfonts.com #### */
++
++@font-face {
++font-family: 'Segoe UI Regular';
++font-style: normal;
++font-weight: normal;
++src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
++}
++
++
++@font-face {
++font-family: 'Segoe UI Italic';
++font-style: normal;
++font-weight: normal;
++src: local('Segoe UI Italic'), url('Segoe UI Italic.woff') format('woff');
++}
++
++
++@font-face {
++font-family: 'Segoe UI Bold';
++font-style: normal;
++font-weight: normal;
++src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
++}
++
++
++@font-face {
++font-family: 'Segoe UI Bold Italic';
++font-style: normal;
++font-weight: normal;
++src: local('Segoe UI Bold Italic'), url('Segoe UI Bold Italic.woff') format('woff');
++}
+\ No newline at end of file
+diff --git a/img/Instagram.png b/img/Instagram.png
+new file mode 100644
+index 0000000..cfc5064
+Binary files /dev/null and b/img/Instagram.png differ
+diff --git a/img/arrow-right.svg b/img/arrow-right.svg
+new file mode 100644
+index 0000000..115407e
+--- /dev/null
++++ b/img/arrow-right.svg
+@@ -0,0 +1,3 @@
++<svg width="17" height="29" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg">
++<path d="M15.8936 13.632L2.33608 0.236548C2.01686 -0.0788495 1.50491 -0.0788495 1.1857 0.236548C0.866485 0.551946 0.866485 1.05777 1.1857 1.37317L14.1651 14.1974L1.1857 27.0216C0.866485 27.337 0.866485 27.8428 1.1857 28.1582C1.3423 28.3129 1.5531 28.3962 1.75788 28.3962C1.96266 28.3962 2.17346 28.3189 2.33005 28.1582L15.8876 14.7627C16.2068 14.4533 16.2068 13.9415 15.8936 13.632Z" fill="white"/>
++</svg>
+diff --git a/img/brand-girl1.png b/img/brand-girl1.png
+new file mode 100644
+index 0000000..973cb2f
+Binary files /dev/null and b/img/brand-girl1.png differ
+diff --git a/img/brand-girl2.png b/img/brand-girl2.png
+new file mode 100644
+index 0000000..2948a86
+Binary files /dev/null and b/img/brand-girl2.png differ
+diff --git a/img/brand-girl3.png b/img/brand-girl3.png
+new file mode 100644
+index 0000000..25fdbe9
+Binary files /dev/null and b/img/brand-girl3.png differ
+diff --git a/img/brand1.png b/img/brand1.png
+new file mode 100644
+index 0000000..87b9830
+Binary files /dev/null and b/img/brand1.png differ
+diff --git a/img/brand2.png b/img/brand2.png
+new file mode 100644
+index 0000000..acf319e
+Binary files /dev/null and b/img/brand2.png differ
+diff --git a/img/brand3-2.png b/img/brand3-2.png
+new file mode 100644
+index 0000000..8d62cfa
+Binary files /dev/null and b/img/brand3-2.png differ
+diff --git a/img/brand3-3.png b/img/brand3-3.png
+new file mode 100644
+index 0000000..e635a12
+Binary files /dev/null and b/img/brand3-3.png differ
+diff --git a/img/brand3.png b/img/brand3.png
+new file mode 100644
+index 0000000..cc966de
+Binary files /dev/null and b/img/brand3.png differ
+diff --git a/img/brand4.png b/img/brand4.png
+new file mode 100644
+index 0000000..3d39491
+Binary files /dev/null and b/img/brand4.png differ
+diff --git a/img/card-bg.png b/img/card-bg.png
+new file mode 100644
+index 0000000..99dedfd
+Binary files /dev/null and b/img/card-bg.png differ
+diff --git a/img/dismiss-btn.png b/img/dismiss-btn.png
+new file mode 100644
+index 0000000..665cdbe
+Binary files /dev/null and b/img/dismiss-btn.png differ
+diff --git a/img/facebook-ico.png b/img/facebook-ico.png
+new file mode 100644
+index 0000000..e4fdbf0
+Binary files /dev/null and b/img/facebook-ico.png differ
+diff --git a/img/facebook.png b/img/facebook.png
+new file mode 100644
+index 0000000..e39685c
+Binary files /dev/null and b/img/facebook.png differ
+diff --git a/img/footer-bg.png b/img/footer-bg.png
+new file mode 100644
+index 0000000..61f06b8
+Binary files /dev/null and b/img/footer-bg.png differ
+diff --git a/img/girl.png b/img/girl.png
+new file mode 100644
+index 0000000..504f97c
+Binary files /dev/null and b/img/girl.png differ
+diff --git a/img/google.png b/img/google.png
+new file mode 100644
+index 0000000..480b554
+Binary files /dev/null and b/img/google.png differ
+diff --git a/img/header-bg.jpg b/img/header-bg.jpg
+new file mode 100644
+index 0000000..0bc14ba
+Binary files /dev/null and b/img/header-bg.jpg differ
+diff --git a/img/img-icon.png b/img/img-icon.png
+new file mode 100644
+index 0000000..6425dde
+Binary files /dev/null and b/img/img-icon.png differ
+diff --git a/img/img-icon2.png b/img/img-icon2.png
+new file mode 100644
+index 0000000..00c3a67
+Binary files /dev/null and b/img/img-icon2.png differ
+diff --git a/img/line.png b/img/line.png
+new file mode 100644
+index 0000000..961b0cb
+Binary files /dev/null and b/img/line.png differ
+diff --git a/img/list-item-bg.png b/img/list-item-bg.png
+new file mode 100644
+index 0000000..1645df8
+Binary files /dev/null and b/img/list-item-bg.png differ
+diff --git a/img/logo-3 1.png b/img/logo-3 1.png
+new file mode 100644
+index 0000000..2408c37
+Binary files /dev/null and b/img/logo-3 1.png differ
+diff --git a/img/logo.svg b/img/logo.svg
+new file mode 100644
+index 0000000..ad8d7be
+--- /dev/null
++++ b/img/logo.svg
+@@ -0,0 +1,81 @@
++<?xml version="1.0" encoding="iso-8859-1"?>
++<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
++<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
++	 viewBox="0 0 511.993 511.993" style="enable-background:new 0 0 511.993 511.993;" xml:space="preserve">
++<circle style="fill:#F7F7F7;" cx="255.997" cy="255.997" r="255.997"/>
++<path style="fill:#E2E1E4;" d="M390.932,248.339L390.932,248.339h-4.936v6.181h-1.864l-2.474-2.474h-4.936v2.474h-1.865
++	l-2.474-2.474h-3.837l-5.437-5.437h-4.936v4.936l-1.843,1.843l-2.495-2.495h-0.516L186.916,84.487h-4.936v102.415l-13.612-13.612
++	h-4.936v37.502l-13.612-13.612h-4.936v51.129l-4.338-4.338h-4.936v10.547h-1.864l-2.474-2.474h-4.936v2.474h-2.524L122,252.704
++	h-4.936v1.814h-1.864l-2.474-2.474l0,0h-4.936v2.474h-1.865l-2.474-2.474h-4.936v2.195l-4.338-4.338h-4.936v4.616H87.38
++	l-2.474-2.474h-4.936v2.474h-0.877l-3.462-3.462h-4.936v3.462h-0.876l-3.462-3.462h-4.936v3.462h-4.122v2.961l82.902,82.902
++	l41.775,41.775v45.354l84.265,84.265c119.413-4.703,217.804-91.183,240.71-205.001l-52.258-52.258H397.11L390.932,248.339z"/>
++<rect x="57.304" y="254.516" style="fill:#797882;" width="397.395" height="2.961"/>
++<g>
++	<rect x="61.43" y="251.061" style="fill:#3E3E42;" width="4.936" height="9.881"/>
++	<rect x="70.699" y="251.061" style="fill:#3E3E42;" width="4.936" height="9.881"/>
++	<rect x="79.969" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="89.248" y="249.906" style="fill:#3E3E42;" width="4.936" height="12.193"/>
++	<rect x="98.517" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="107.796" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="117.066" y="252.709" style="fill:#3E3E42;" width="4.936" height="6.59"/>
++	<rect x="126.335" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="135.614" y="243.973" style="fill:#3E3E42;" width="4.936" height="24.054"/>
++	<rect x="144.883" y="197.182" style="fill:#3E3E42;" width="4.936" height="117.638"/>
++	<rect x="154.163" y="213.49" style="fill:#3E3E42;" width="4.936" height="85.013"/>
++	<rect x="163.432" y="173.293" style="fill:#3E3E42;" width="4.936" height="165.416"/>
++	<rect x="172.711" y="184.33" style="fill:#3E3E42;" width="4.936" height="143.343"/>
++	<rect x="181.98" y="84.49" style="fill:#3E3E42;" width="4.936" height="343.023"/>
++	<rect x="191.25" y="137.124" style="fill:#3E3E42;" width="4.936" height="237.744"/>
++	<rect x="200.529" y="132.929" style="fill:#3E3E42;" width="4.936" height="246.145"/>
++	<rect x="209.798" y="184.33" style="fill:#3E3E42;" width="4.936" height="143.343"/>
++	<rect x="219.077" y="209.295" style="fill:#3E3E42;" width="4.936" height="93.423"/>
++	<rect x="228.347" y="234.25" style="fill:#3E3E42;" width="4.936" height="43.494"/>
++	<rect x="237.626" y="207.064" style="fill:#3E3E42;" width="4.936" height="97.866"/>
++	<rect x="246.895" y="218.929" style="fill:#3E3E42;" width="4.936" height="74.145"/>
++	<rect x="256.164" y="201.378" style="fill:#3E3E42;" width="4.936" height="109.238"/>
++	<rect x="265.444" y="234.25" style="fill:#3E3E42;" width="4.936" height="43.494"/>
++	<rect x="274.713" y="234.25" style="fill:#3E3E42;" width="4.936" height="43.494"/>
++	<rect x="283.992" y="230.548" style="fill:#3E3E42;" width="4.936" height="50.909"/>
++	<rect x="293.261" y="240.923" style="fill:#3E3E42;" width="4.936" height="30.15"/>
++	<rect x="302.54" y="246.609" style="fill:#3E3E42;" width="4.936" height="18.785"/>
++	<rect x="311.81" y="243.973" style="fill:#3E3E42;" width="4.936" height="24.054"/>
++	<rect x="321.079" y="246.609" style="fill:#3E3E42;" width="4.936" height="18.785"/>
++	<rect x="330.358" y="249.906" style="fill:#3E3E42;" width="4.936" height="12.193"/>
++	<rect x="339.628" y="249.906" style="fill:#3E3E42;" width="4.936" height="12.193"/>
++	<rect x="348.907" y="250.893" style="fill:#3E3E42;" width="4.936" height="10.215"/>
++	<rect x="358.176" y="246.609" style="fill:#3E3E42;" width="4.936" height="18.785"/>
++	<rect x="367.455" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="376.724" y="252.048" style="fill:#3E3E42;" width="4.936" height="7.907"/>
++	<rect x="385.994" y="248.336" style="fill:#3E3E42;" width="4.936" height="15.321"/>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++<g>
++</g>
++</svg>
+diff --git a/img/man.png b/img/man.png
+new file mode 100644
+index 0000000..9a02cf7
+Binary files /dev/null and b/img/man.png differ
+diff --git a/img/marketing-1.png b/img/marketing-1.png
+new file mode 100644
+index 0000000..25519b4
+Binary files /dev/null and b/img/marketing-1.png differ
+diff --git a/img/marketing-2.png b/img/marketing-2.png
+new file mode 100644
+index 0000000..d1b0f6d
+Binary files /dev/null and b/img/marketing-2.png differ
+diff --git a/img/marketing-3.png b/img/marketing-3.png
+new file mode 100644
+index 0000000..17bd630
+Binary files /dev/null and b/img/marketing-3.png differ
+diff --git a/img/marketing-bg.png b/img/marketing-bg.png
+new file mode 100644
+index 0000000..1e5bee4
+Binary files /dev/null and b/img/marketing-bg.png differ
+diff --git a/img/message.png b/img/message.png
+new file mode 100644
+index 0000000..f728046
+Binary files /dev/null and b/img/message.png differ
+diff --git a/img/pen.png b/img/pen.png
+new file mode 100644
+index 0000000..b6508eb
+Binary files /dev/null and b/img/pen.png differ
+diff --git a/img/pinterest_logo_red.png b/img/pinterest_logo_red.png
+new file mode 100644
+index 0000000..a064c3b
+Binary files /dev/null and b/img/pinterest_logo_red.png differ
+diff --git a/img/twitter.png b/img/twitter.png
+new file mode 100644
+index 0000000..e11c771
+Binary files /dev/null and b/img/twitter.png differ
+diff --git a/img/twitter_PNG12.png b/img/twitter_PNG12.png
+new file mode 100644
+index 0000000..efa3cef
+Binary files /dev/null and b/img/twitter_PNG12.png differ
+diff --git a/img/vk.png b/img/vk.png
+new file mode 100644
+index 0000000..7cea880
+Binary files /dev/null and b/img/vk.png differ
+diff --git a/img/youtube.png b/img/youtube.png
+new file mode 100644
+index 0000000..9819618
+Binary files /dev/null and b/img/youtube.png differ
+diff --git "a/img/\342\200\224Pngtree\342\200\224golden glitter light effect musical_5322215.png" "b/img/\342\200\224Pngtree\342\200\224golden glitter light effect musical_5322215.png"
+new file mode 100644
+index 0000000..7a64b0d
+Binary files /dev/null and "b/img/\342\200\224Pngtree\342\200\224golden glitter light effect musical_5322215.png" differ
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..24119b2
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,296 @@
++﻿<!DOCTYPE html>
++<html lang="en">
++<head>
++	<meta cahrset="UTF-8">
++	<meta name="viewport" content="width=device-width, initial-scale=1.0">
++	<meta http-equiv="Content-Type" content="text/html;charset=windows-1251" />
++	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
++	<meta http-equiv="X-UA-Compatible" content="device-width" />
++
++	<link href="https://fonts.googleapis.com/css2?family=Pavanam&display=swap" rel="stylesheet">
++	<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
++	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
++	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
++	<link rel="stylesheet" href="css/style.css"/>
++	<link rel="stylesheet" href="css/media.css">
++	<title>Document</title>
++</head>
++<body>
++	<script src="https://kit.fontawesome.com/9ad04bd1b1.js"></script>
++	<div class="wrapper">
++		<div class="header">
++			<div class="container">
++				<div class="header__inner">
++					<ul class="header__list">
++						<li class="header__logo header__list-item">
++							<a href="#" class="header__logo-link">
++								<span>ALPINE</span>
++								<img src="img/list-item-bg.png" alt="">
++							</a>
++						</li>
++						
++						<li class="header__list-item">
++							<a href="#" class="header__list-link">About us</a>
++						</li>
++
++						<li class="header__list-item">
++							<a href="#" class="header__list-link">Pricing</a>
++						</li>
++
++						<li class="header__list-item">
++							<a href="#" class="header__list-link">Mobile</a>
++						</li>
++
++						<li class="header__list-item">
++							<a href="#" class="header__list-link">Blog</a>
++						</li>
++					</ul>
++				<div class="header__about">
++					<div class="header__about-inner">
++						<h1 class="header__about-title">Alpine</h1>
++						<p class="header__about-info">SOCIAL MEDIA MARKETING PLATFORM</p>
++						<p class="header__about-text">
++							The core systems of record for marketing that provide a common way
++						 	of orchestring the experiences across channels and applications,
++						 	including operational managment and measurement,
++							with the ultimate goal of driving customer engagement.
++						</p>
++
++						<form action="#" class="header__about-form">
++							<input type="text" placeholder="Enter your work email!" class="header__about-input">
++							<button type="submit" class="header__about-btn">Request acces</button>
++						</form>
++						
++					</div>
++					<ul class="header__about-list">
++							<li class="header__about-item">
++								<img src="img/facebook.png" alt="">
++							</li>
++							<li class="header__about-item">
++								<img src="img/Instagram.png" alt="">
++							</li>
++							<li class="header__about-item">
++								<img src="img/twitter_PNG12.png" alt="">
++							</li>
++							<li class="header__about-item">
++								<img src="img/youtube.png" alt="">
++							</li>
++							<li class="header__about-item">
++								<img src="img/pinterest_logo_red.png" alt="">
++							</li>
++							<li class="header__about-item">
++								<img src="img/google.png" alt="">
++							</li>
++						</ul>
++				</div>
++				</div>
++			</div>
++		</div>
++		<section class="marketing">
++			<div class="container">
++				<div class="marketing__inner">
++					<div class="marketing__inner-images">
++						<img src="img/marketing-1.png" class="left-img marketing__inner-img">
++						<img src="img/marketing-2.png" class="center-img marketing__inner-img">
++						<img src="img/marketing-3.png" class="right-img marketing__inner-img">
++					</div>
++					<div class="marketing-start">
++						<span>marketing</span>
++						<img src="img/line.png" class="lines">
++						<button type="submit" class="marketing__btn">
++							<img src="img/pen.png">
++							Start a thread
++						</button>
++					</div>
++					<div class="chat__section">
++					<div class="users-box">
++						<div class="users-box__card">
++							<div class="user-box__card-buttons">
++								<span class="notifications">
++								Unread Notifications</span>
++								<button class="dismiss__btn" type="button">
++								<img src="img/dismiss-btn.png" alt="">
++								Dismiss all</button>
++							</div>
++							<div class="user-box__message">
++								<div class="user-info">
++									<div class="user-info__img">
++									<img src="img/girl.png" class="user-img">
++									<img src="img/img-icon.png" class="user-imgicon">
++									</div>
++									<div class="user-info__name">
++									<span class="user-name">Rosario</span>
++									<span class="user-onlinetime">Just now</span>
++									</div>
++								</div>
++								<div class="user-message">
++									<h4 class="user-message__title">Showcasing Customers</h4>
++									<p class="user-message__text">
++										Our customers have continued to send
++										in pictures of their finished artwork...
++									</p>
++								</div>
++							</div>
++						</div>
++
++						<div class="users-box__card">
++							<div class="user-box__card-buttons">
++								<span class="notifications notifications__2">
++								Recent</span>
++								<button class="dismiss__btn" type="button">
++								Unread
++								<div class="toggle">
++									<div class="toggle-btn"></div>
++								</div>
++							</button>
++							</div>
++							<div class="user-box__message">
++								<div class="user-info">
++									<div class="user-info__img">
++									<img src="img/man.png" class="user-img">
++									<img src="img/img-icon2.png" class="user-imgicon">
++									</div>
++									<div class="user-info__name">
++									<span class="user-name">Dan</span>
++									<span class="user-onlinetime">2 hrs ago</span>
++									</div>
++								</div>
++								<div class="user-message">
++									<h4 class="user-message__title">Thoughts on attendin...</h4>
++									<p class="user-message__text">
++										Our customers have continued to send
++										in pictures of their finished artwork...
++									</p>
++								</div>
++							</div>
++						</div>
++					</div>
++
++					<div class="thread">
++						<div class="thread-first">
++							<h4>Start a thread</h4>
++							<p>Technology trends have the potential to drive significant
++							 disruption and deliver significant opportunity. 
++							Digital trends such as autonomous things, blockchain,
++							 digital twins and smart spaces are rapidly approaching maturity.</p>
++						</div>
++						<div class="thread-second">
++							<h4>Mark the decision</h4>
++							<p>This continuous technology innovation will enable the alignment
++							 of the physical and digital worlds and create competitive advantage
++							 for some. Are you ready?</p>
++						</div>
++					</div>
++				</div>
++				</div>
++			<div class="brands">
++					<div class="brands-logos">
++						<img src="img/brand1.png" alt="">
++						<img src="img/brand2.png" alt="">
++						<img src="img/brand3.png" alt="">
++						<img src="img/brand4.png" alt="">
++					</div>
++					<div class="collegues">
++						<div class="collegue collegue-1">
++							<div class="collegue-header">
++								<img src="img/brand-girl1.png" alt="">
++								<img src="img/logo-3 1.png" alt="">
++							</div>
++							<div class="collegue-info">
++								<p>The AMA’s definitions of marketing and marketing
++								research are reviewed and reapproved/modified every
++								three-years by a panel of five scholars who are active 
++								researchers.</p>
++							</div>
++						</div>
++						<div class="collegue collegue-2">
++							<div class="collegue-header">
++								<img src="img/brand-girl2.png" alt="">
++								<img src="img/brand3-2.png" class="brand">
++							</div>
++							<div class="collegue-info">
++								<p>Marketing is the activity, set of institutions,
++								 and processes for creating, communicating, delivering,
++								  and exchanging offerings that have value for customers,
++								   clients, partners, and society at large. .</p>
++							</div>
++						</div>
++						<div class="collegue collegue-2">
++							<div class="collegue-header">
++								<img src="img/brand-girl3.png" alt="">
++								<img src="img/brand3-3.png" alt="">
++							</div>
++							<div class="collegue-info">
++								<p>A brand is a name, term, design,
++								 symbol or any other feature that identifies one 
++								seller’s good or service as distinct from
++								 those of other sellers.</p>
++							</div>
++						</div>
++					</div>
++			</div>
++				</div>
++			</div>
++		</section>
++
++		<div class="footer">
++			<h1 class="footer__title">ALPINE</h1>
++			<ul class="footer__list">
++				<li class="footer__list-title">
++					Explore
++				</li>
++				<li class="footer__list-item">
++					<a href="" class="footer__list-link">
++						Pricing
++					</a>
++				</li>
++				<li class="footer__list-item">
++					<a href="" class="footer__list-link">
++						Mobile
++					</a>
++				</li>
++			</ul>
++			<ul class="footer__list">
++				<li class="footer__list-title">
++					Recources
++				</li>
++				<li class="footer__list-item">
++					<a href="" class="footer__list-link">
++						Blog
++					</a>
++				</li>
++			</ul>
++			<ul class="footer__list">
++				<li class="footer__list-title">
++					Company
++				</li>
++				<li class="footer__list-item">
++					<a href="" class="footer__list-link">
++						About us
++					</a>
++				</li>
++				<li class="footer__list-item">
++					<a href="" class="footer__list-link">
++						Contact
++					</a>
++				</li>
++			</ul>
++
++			<div class="footer__info">
++				<div class="footer__social">
++					<img src="img/vk.png" alt="">
++					<img src="img/twitter.png" alt="">
++					<img src="img/facebook-ico.png" alt="">
++				</div>
++				<div class="footer__info-policy">
++					<p class="terms__privacy">Terms & Privacy</p>
++					<p class="since"> © 2019 Threads Group inc.</p>
++				</div>
++			</div>
++		</div>
++
++	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
++	<script src="js/slick.min.js"></script>
++	<script src="js/main.js"></script>
++</body>
++</html>
+diff --git a/js/main.js b/js/main.js
+new file mode 100644
+index 0000000..e69de29
+diff --git a/js/slick.min.js b/js/slick.min.js
+new file mode 100644
+index 0000000..42172c2
+--- /dev/null
++++ b/js/slick.min.js
+@@ -0,0 +1 @@
++!function(i){"use strict";"function"==typeof define&&define.amd?define(["jquery"],i):"undefined"!=typeof exports?module.exports=i(require("jquery")):i(jQuery)}(function(i){"use strict";var e=window.Slick||{};(e=function(){var e=0;return function(t,o){var s,n=this;n.defaults={accessibility:!0,adaptiveHeight:!1,appendArrows:i(t),appendDots:i(t),arrows:!0,asNavFor:null,prevArrow:'<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',nextArrow:'<button class="slick-next" aria-label="Next" type="button">Next</button>',autoplay:!1,autoplaySpeed:3e3,centerMode:!1,centerPadding:"50px",cssEase:"ease",customPaging:function(e,t){return i('<button type="button" />').text(t+1)},dots:!1,dotsClass:"slick-dots",draggable:!0,easing:"linear",edgeFriction:.35,fade:!1,focusOnSelect:!1,focusOnChange:!1,infinite:!0,initialSlide:0,lazyLoad:"ondemand",mobileFirst:!1,pauseOnHover:!0,pauseOnFocus:!0,pauseOnDotsHover:!1,respondTo:"window",responsive:null,rows:1,rtl:!1,slide:"",slidesPerRow:1,slidesToShow:1,slidesToScroll:1,speed:500,swipe:!0,swipeToSlide:!1,touchMove:!0,touchThreshold:5,useCSS:!0,useTransform:!0,variableWidth:!1,vertical:!1,verticalSwiping:!1,waitForAnimate:!0,zIndex:1e3},n.initials={animating:!1,dragging:!1,autoPlayTimer:null,currentDirection:0,currentLeft:null,currentSlide:0,direction:1,$dots:null,listWidth:null,listHeight:null,loadIndex:0,$nextArrow:null,$prevArrow:null,scrolling:!1,slideCount:null,slideWidth:null,$slideTrack:null,$slides:null,sliding:!1,slideOffset:0,swipeLeft:null,swiping:!1,$list:null,touchObject:{},transformsEnabled:!1,unslicked:!1},i.extend(n,n.initials),n.activeBreakpoint=null,n.animType=null,n.animProp=null,n.breakpoints=[],n.breakpointSettings=[],n.cssTransitions=!1,n.focussed=!1,n.interrupted=!1,n.hidden="hidden",n.paused=!0,n.positionProp=null,n.respondTo=null,n.rowCount=1,n.shouldClick=!0,n.$slider=i(t),n.$slidesCache=null,n.transformType=null,n.transitionType=null,n.visibilityChange="visibilitychange",n.windowWidth=0,n.windowTimer=null,s=i(t).data("slick")||{},n.options=i.extend({},n.defaults,o,s),n.currentSlide=n.options.initialSlide,n.originalSettings=n.options,void 0!==document.mozHidden?(n.hidden="mozHidden",n.visibilityChange="mozvisibilitychange"):void 0!==document.webkitHidden&&(n.hidden="webkitHidden",n.visibilityChange="webkitvisibilitychange"),n.autoPlay=i.proxy(n.autoPlay,n),n.autoPlayClear=i.proxy(n.autoPlayClear,n),n.autoPlayIterator=i.proxy(n.autoPlayIterator,n),n.changeSlide=i.proxy(n.changeSlide,n),n.clickHandler=i.proxy(n.clickHandler,n),n.selectHandler=i.proxy(n.selectHandler,n),n.setPosition=i.proxy(n.setPosition,n),n.swipeHandler=i.proxy(n.swipeHandler,n),n.dragHandler=i.proxy(n.dragHandler,n),n.keyHandler=i.proxy(n.keyHandler,n),n.instanceUid=e++,n.htmlExpr=/^(?:\s*(<[\w\W]+>)[^>]*)$/,n.registerBreakpoints(),n.init(!0)}}()).prototype.activateADA=function(){this.$slideTrack.find(".slick-active").attr({"aria-hidden":"false"}).find("a, input, button, select").attr({tabindex:"0"})},e.prototype.addSlide=e.prototype.slickAdd=function(e,t,o){var s=this;if("boolean"==typeof t)o=t,t=null;else if(t<0||t>=s.slideCount)return!1;s.unload(),"number"==typeof t?0===t&&0===s.$slides.length?i(e).appendTo(s.$slideTrack):o?i(e).insertBefore(s.$slides.eq(t)):i(e).insertAfter(s.$slides.eq(t)):!0===o?i(e).prependTo(s.$slideTrack):i(e).appendTo(s.$slideTrack),s.$slides=s.$slideTrack.children(this.options.slide),s.$slideTrack.children(this.options.slide).detach(),s.$slideTrack.append(s.$slides),s.$slides.each(function(e,t){i(t).attr("data-slick-index",e)}),s.$slidesCache=s.$slides,s.reinit()},e.prototype.animateHeight=function(){var i=this;if(1===i.options.slidesToShow&&!0===i.options.adaptiveHeight&&!1===i.options.vertical){var e=i.$slides.eq(i.currentSlide).outerHeight(!0);i.$list.animate({height:e},i.options.speed)}},e.prototype.animateSlide=function(e,t){var o={},s=this;s.animateHeight(),!0===s.options.rtl&&!1===s.options.vertical&&(e=-e),!1===s.transformsEnabled?!1===s.options.vertical?s.$slideTrack.animate({left:e},s.options.speed,s.options.easing,t):s.$slideTrack.animate({top:e},s.options.speed,s.options.easing,t):!1===s.cssTransitions?(!0===s.options.rtl&&(s.currentLeft=-s.currentLeft),i({animStart:s.currentLeft}).animate({animStart:e},{duration:s.options.speed,easing:s.options.easing,step:function(i){i=Math.ceil(i),!1===s.options.vertical?(o[s.animType]="translate("+i+"px, 0px)",s.$slideTrack.css(o)):(o[s.animType]="translate(0px,"+i+"px)",s.$slideTrack.css(o))},complete:function(){t&&t.call()}})):(s.applyTransition(),e=Math.ceil(e),!1===s.options.vertical?o[s.animType]="translate3d("+e+"px, 0px, 0px)":o[s.animType]="translate3d(0px,"+e+"px, 0px)",s.$slideTrack.css(o),t&&setTimeout(function(){s.disableTransition(),t.call()},s.options.speed))},e.prototype.getNavTarget=function(){var e=this,t=e.options.asNavFor;return t&&null!==t&&(t=i(t).not(e.$slider)),t},e.prototype.asNavFor=function(e){var t=this.getNavTarget();null!==t&&"object"==typeof t&&t.each(function(){var t=i(this).slick("getSlick");t.unslicked||t.slideHandler(e,!0)})},e.prototype.applyTransition=function(i){var e=this,t={};!1===e.options.fade?t[e.transitionType]=e.transformType+" "+e.options.speed+"ms "+e.options.cssEase:t[e.transitionType]="opacity "+e.options.speed+"ms "+e.options.cssEase,!1===e.options.fade?e.$slideTrack.css(t):e.$slides.eq(i).css(t)},e.prototype.autoPlay=function(){var i=this;i.autoPlayClear(),i.slideCount>i.options.slidesToShow&&(i.autoPlayTimer=setInterval(i.autoPlayIterator,i.options.autoplaySpeed))},e.prototype.autoPlayClear=function(){var i=this;i.autoPlayTimer&&clearInterval(i.autoPlayTimer)},e.prototype.autoPlayIterator=function(){var i=this,e=i.currentSlide+i.options.slidesToScroll;i.paused||i.interrupted||i.focussed||(!1===i.options.infinite&&(1===i.direction&&i.currentSlide+1===i.slideCount-1?i.direction=0:0===i.direction&&(e=i.currentSlide-i.options.slidesToScroll,i.currentSlide-1==0&&(i.direction=1))),i.slideHandler(e))},e.prototype.buildArrows=function(){var e=this;!0===e.options.arrows&&(e.$prevArrow=i(e.options.prevArrow).addClass("slick-arrow"),e.$nextArrow=i(e.options.nextArrow).addClass("slick-arrow"),e.slideCount>e.options.slidesToShow?(e.$prevArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex"),e.$nextArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex"),e.htmlExpr.test(e.options.prevArrow)&&e.$prevArrow.prependTo(e.options.appendArrows),e.htmlExpr.test(e.options.nextArrow)&&e.$nextArrow.appendTo(e.options.appendArrows),!0!==e.options.infinite&&e.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true")):e.$prevArrow.add(e.$nextArrow).addClass("slick-hidden").attr({"aria-disabled":"true",tabindex:"-1"}))},e.prototype.buildDots=function(){var e,t,o=this;if(!0===o.options.dots){for(o.$slider.addClass("slick-dotted"),t=i("<ul />").addClass(o.options.dotsClass),e=0;e<=o.getDotCount();e+=1)t.append(i("<li />").append(o.options.customPaging.call(this,o,e)));o.$dots=t.appendTo(o.options.appendDots),o.$dots.find("li").first().addClass("slick-active")}},e.prototype.buildOut=function(){var e=this;e.$slides=e.$slider.children(e.options.slide+":not(.slick-cloned)").addClass("slick-slide"),e.slideCount=e.$slides.length,e.$slides.each(function(e,t){i(t).attr("data-slick-index",e).data("originalStyling",i(t).attr("style")||"")}),e.$slider.addClass("slick-slider"),e.$slideTrack=0===e.slideCount?i('<div class="slick-track"/>').appendTo(e.$slider):e.$slides.wrapAll('<div class="slick-track"/>').parent(),e.$list=e.$slideTrack.wrap('<div class="slick-list"/>').parent(),e.$slideTrack.css("opacity",0),!0!==e.options.centerMode&&!0!==e.options.swipeToSlide||(e.options.slidesToScroll=1),i("img[data-lazy]",e.$slider).not("[src]").addClass("slick-loading"),e.setupInfinite(),e.buildArrows(),e.buildDots(),e.updateDots(),e.setSlideClasses("number"==typeof e.currentSlide?e.currentSlide:0),!0===e.options.draggable&&e.$list.addClass("draggable")},e.prototype.buildRows=function(){var i,e,t,o,s,n,r,l=this;if(o=document.createDocumentFragment(),n=l.$slider.children(),l.options.rows>1){for(r=l.options.slidesPerRow*l.options.rows,s=Math.ceil(n.length/r),i=0;i<s;i++){var d=document.createElement("div");for(e=0;e<l.options.rows;e++){var a=document.createElement("div");for(t=0;t<l.options.slidesPerRow;t++){var c=i*r+(e*l.options.slidesPerRow+t);n.get(c)&&a.appendChild(n.get(c))}d.appendChild(a)}o.appendChild(d)}l.$slider.empty().append(o),l.$slider.children().children().children().css({width:100/l.options.slidesPerRow+"%",display:"inline-block"})}},e.prototype.checkResponsive=function(e,t){var o,s,n,r=this,l=!1,d=r.$slider.width(),a=window.innerWidth||i(window).width();if("window"===r.respondTo?n=a:"slider"===r.respondTo?n=d:"min"===r.respondTo&&(n=Math.min(a,d)),r.options.responsive&&r.options.responsive.length&&null!==r.options.responsive){s=null;for(o in r.breakpoints)r.breakpoints.hasOwnProperty(o)&&(!1===r.originalSettings.mobileFirst?n<r.breakpoints[o]&&(s=r.breakpoints[o]):n>r.breakpoints[o]&&(s=r.breakpoints[o]));null!==s?null!==r.activeBreakpoint?(s!==r.activeBreakpoint||t)&&(r.activeBreakpoint=s,"unslick"===r.breakpointSettings[s]?r.unslick(s):(r.options=i.extend({},r.originalSettings,r.breakpointSettings[s]),!0===e&&(r.currentSlide=r.options.initialSlide),r.refresh(e)),l=s):(r.activeBreakpoint=s,"unslick"===r.breakpointSettings[s]?r.unslick(s):(r.options=i.extend({},r.originalSettings,r.breakpointSettings[s]),!0===e&&(r.currentSlide=r.options.initialSlide),r.refresh(e)),l=s):null!==r.activeBreakpoint&&(r.activeBreakpoint=null,r.options=r.originalSettings,!0===e&&(r.currentSlide=r.options.initialSlide),r.refresh(e),l=s),e||!1===l||r.$slider.trigger("breakpoint",[r,l])}},e.prototype.changeSlide=function(e,t){var o,s,n,r=this,l=i(e.currentTarget);switch(l.is("a")&&e.preventDefault(),l.is("li")||(l=l.closest("li")),n=r.slideCount%r.options.slidesToScroll!=0,o=n?0:(r.slideCount-r.currentSlide)%r.options.slidesToScroll,e.data.message){case"previous":s=0===o?r.options.slidesToScroll:r.options.slidesToShow-o,r.slideCount>r.options.slidesToShow&&r.slideHandler(r.currentSlide-s,!1,t);break;case"next":s=0===o?r.options.slidesToScroll:o,r.slideCount>r.options.slidesToShow&&r.slideHandler(r.currentSlide+s,!1,t);break;case"index":var d=0===e.data.index?0:e.data.index||l.index()*r.options.slidesToScroll;r.slideHandler(r.checkNavigable(d),!1,t),l.children().trigger("focus");break;default:return}},e.prototype.checkNavigable=function(i){var e,t;if(e=this.getNavigableIndexes(),t=0,i>e[e.length-1])i=e[e.length-1];else for(var o in e){if(i<e[o]){i=t;break}t=e[o]}return i},e.prototype.cleanUpEvents=function(){var e=this;e.options.dots&&null!==e.$dots&&(i("li",e.$dots).off("click.slick",e.changeSlide).off("mouseenter.slick",i.proxy(e.interrupt,e,!0)).off("mouseleave.slick",i.proxy(e.interrupt,e,!1)),!0===e.options.accessibility&&e.$dots.off("keydown.slick",e.keyHandler)),e.$slider.off("focus.slick blur.slick"),!0===e.options.arrows&&e.slideCount>e.options.slidesToShow&&(e.$prevArrow&&e.$prevArrow.off("click.slick",e.changeSlide),e.$nextArrow&&e.$nextArrow.off("click.slick",e.changeSlide),!0===e.options.accessibility&&(e.$prevArrow&&e.$prevArrow.off("keydown.slick",e.keyHandler),e.$nextArrow&&e.$nextArrow.off("keydown.slick",e.keyHandler))),e.$list.off("touchstart.slick mousedown.slick",e.swipeHandler),e.$list.off("touchmove.slick mousemove.slick",e.swipeHandler),e.$list.off("touchend.slick mouseup.slick",e.swipeHandler),e.$list.off("touchcancel.slick mouseleave.slick",e.swipeHandler),e.$list.off("click.slick",e.clickHandler),i(document).off(e.visibilityChange,e.visibility),e.cleanUpSlideEvents(),!0===e.options.accessibility&&e.$list.off("keydown.slick",e.keyHandler),!0===e.options.focusOnSelect&&i(e.$slideTrack).children().off("click.slick",e.selectHandler),i(window).off("orientationchange.slick.slick-"+e.instanceUid,e.orientationChange),i(window).off("resize.slick.slick-"+e.instanceUid,e.resize),i("[draggable!=true]",e.$slideTrack).off("dragstart",e.preventDefault),i(window).off("load.slick.slick-"+e.instanceUid,e.setPosition)},e.prototype.cleanUpSlideEvents=function(){var e=this;e.$list.off("mouseenter.slick",i.proxy(e.interrupt,e,!0)),e.$list.off("mouseleave.slick",i.proxy(e.interrupt,e,!1))},e.prototype.cleanUpRows=function(){var i,e=this;e.options.rows>1&&((i=e.$slides.children().children()).removeAttr("style"),e.$slider.empty().append(i))},e.prototype.clickHandler=function(i){!1===this.shouldClick&&(i.stopImmediatePropagation(),i.stopPropagation(),i.preventDefault())},e.prototype.destroy=function(e){var t=this;t.autoPlayClear(),t.touchObject={},t.cleanUpEvents(),i(".slick-cloned",t.$slider).detach(),t.$dots&&t.$dots.remove(),t.$prevArrow&&t.$prevArrow.length&&(t.$prevArrow.removeClass("slick-disabled slick-arrow slick-hidden").removeAttr("aria-hidden aria-disabled tabindex").css("display",""),t.htmlExpr.test(t.options.prevArrow)&&t.$prevArrow.remove()),t.$nextArrow&&t.$nextArrow.length&&(t.$nextArrow.removeClass("slick-disabled slick-arrow slick-hidden").removeAttr("aria-hidden aria-disabled tabindex").css("display",""),t.htmlExpr.test(t.options.nextArrow)&&t.$nextArrow.remove()),t.$slides&&(t.$slides.removeClass("slick-slide slick-active slick-center slick-visible slick-current").removeAttr("aria-hidden").removeAttr("data-slick-index").each(function(){i(this).attr("style",i(this).data("originalStyling"))}),t.$slideTrack.children(this.options.slide).detach(),t.$slideTrack.detach(),t.$list.detach(),t.$slider.append(t.$slides)),t.cleanUpRows(),t.$slider.removeClass("slick-slider"),t.$slider.removeClass("slick-initialized"),t.$slider.removeClass("slick-dotted"),t.unslicked=!0,e||t.$slider.trigger("destroy",[t])},e.prototype.disableTransition=function(i){var e=this,t={};t[e.transitionType]="",!1===e.options.fade?e.$slideTrack.css(t):e.$slides.eq(i).css(t)},e.prototype.fadeSlide=function(i,e){var t=this;!1===t.cssTransitions?(t.$slides.eq(i).css({zIndex:t.options.zIndex}),t.$slides.eq(i).animate({opacity:1},t.options.speed,t.options.easing,e)):(t.applyTransition(i),t.$slides.eq(i).css({opacity:1,zIndex:t.options.zIndex}),e&&setTimeout(function(){t.disableTransition(i),e.call()},t.options.speed))},e.prototype.fadeSlideOut=function(i){var e=this;!1===e.cssTransitions?e.$slides.eq(i).animate({opacity:0,zIndex:e.options.zIndex-2},e.options.speed,e.options.easing):(e.applyTransition(i),e.$slides.eq(i).css({opacity:0,zIndex:e.options.zIndex-2}))},e.prototype.filterSlides=e.prototype.slickFilter=function(i){var e=this;null!==i&&(e.$slidesCache=e.$slides,e.unload(),e.$slideTrack.children(this.options.slide).detach(),e.$slidesCache.filter(i).appendTo(e.$slideTrack),e.reinit())},e.prototype.focusHandler=function(){var e=this;e.$slider.off("focus.slick blur.slick").on("focus.slick blur.slick","*",function(t){t.stopImmediatePropagation();var o=i(this);setTimeout(function(){e.options.pauseOnFocus&&(e.focussed=o.is(":focus"),e.autoPlay())},0)})},e.prototype.getCurrent=e.prototype.slickCurrentSlide=function(){return this.currentSlide},e.prototype.getDotCount=function(){var i=this,e=0,t=0,o=0;if(!0===i.options.infinite)if(i.slideCount<=i.options.slidesToShow)++o;else for(;e<i.slideCount;)++o,e=t+i.options.slidesToScroll,t+=i.options.slidesToScroll<=i.options.slidesToShow?i.options.slidesToScroll:i.options.slidesToShow;else if(!0===i.options.centerMode)o=i.slideCount;else if(i.options.asNavFor)for(;e<i.slideCount;)++o,e=t+i.options.slidesToScroll,t+=i.options.slidesToScroll<=i.options.slidesToShow?i.options.slidesToScroll:i.options.slidesToShow;else o=1+Math.ceil((i.slideCount-i.options.slidesToShow)/i.options.slidesToScroll);return o-1},e.prototype.getLeft=function(i){var e,t,o,s,n=this,r=0;return n.slideOffset=0,t=n.$slides.first().outerHeight(!0),!0===n.options.infinite?(n.slideCount>n.options.slidesToShow&&(n.slideOffset=n.slideWidth*n.options.slidesToShow*-1,s=-1,!0===n.options.vertical&&!0===n.options.centerMode&&(2===n.options.slidesToShow?s=-1.5:1===n.options.slidesToShow&&(s=-2)),r=t*n.options.slidesToShow*s),n.slideCount%n.options.slidesToScroll!=0&&i+n.options.slidesToScroll>n.slideCount&&n.slideCount>n.options.slidesToShow&&(i>n.slideCount?(n.slideOffset=(n.options.slidesToShow-(i-n.slideCount))*n.slideWidth*-1,r=(n.options.slidesToShow-(i-n.slideCount))*t*-1):(n.slideOffset=n.slideCount%n.options.slidesToScroll*n.slideWidth*-1,r=n.slideCount%n.options.slidesToScroll*t*-1))):i+n.options.slidesToShow>n.slideCount&&(n.slideOffset=(i+n.options.slidesToShow-n.slideCount)*n.slideWidth,r=(i+n.options.slidesToShow-n.slideCount)*t),n.slideCount<=n.options.slidesToShow&&(n.slideOffset=0,r=0),!0===n.options.centerMode&&n.slideCount<=n.options.slidesToShow?n.slideOffset=n.slideWidth*Math.floor(n.options.slidesToShow)/2-n.slideWidth*n.slideCount/2:!0===n.options.centerMode&&!0===n.options.infinite?n.slideOffset+=n.slideWidth*Math.floor(n.options.slidesToShow/2)-n.slideWidth:!0===n.options.centerMode&&(n.slideOffset=0,n.slideOffset+=n.slideWidth*Math.floor(n.options.slidesToShow/2)),e=!1===n.options.vertical?i*n.slideWidth*-1+n.slideOffset:i*t*-1+r,!0===n.options.variableWidth&&(o=n.slideCount<=n.options.slidesToShow||!1===n.options.infinite?n.$slideTrack.children(".slick-slide").eq(i):n.$slideTrack.children(".slick-slide").eq(i+n.options.slidesToShow),e=!0===n.options.rtl?o[0]?-1*(n.$slideTrack.width()-o[0].offsetLeft-o.width()):0:o[0]?-1*o[0].offsetLeft:0,!0===n.options.centerMode&&(o=n.slideCount<=n.options.slidesToShow||!1===n.options.infinite?n.$slideTrack.children(".slick-slide").eq(i):n.$slideTrack.children(".slick-slide").eq(i+n.options.slidesToShow+1),e=!0===n.options.rtl?o[0]?-1*(n.$slideTrack.width()-o[0].offsetLeft-o.width()):0:o[0]?-1*o[0].offsetLeft:0,e+=(n.$list.width()-o.outerWidth())/2)),e},e.prototype.getOption=e.prototype.slickGetOption=function(i){return this.options[i]},e.prototype.getNavigableIndexes=function(){var i,e=this,t=0,o=0,s=[];for(!1===e.options.infinite?i=e.slideCount:(t=-1*e.options.slidesToScroll,o=-1*e.options.slidesToScroll,i=2*e.slideCount);t<i;)s.push(t),t=o+e.options.slidesToScroll,o+=e.options.slidesToScroll<=e.options.slidesToShow?e.options.slidesToScroll:e.options.slidesToShow;return s},e.prototype.getSlick=function(){return this},e.prototype.getSlideCount=function(){var e,t,o=this;return t=!0===o.options.centerMode?o.slideWidth*Math.floor(o.options.slidesToShow/2):0,!0===o.options.swipeToSlide?(o.$slideTrack.find(".slick-slide").each(function(s,n){if(n.offsetLeft-t+i(n).outerWidth()/2>-1*o.swipeLeft)return e=n,!1}),Math.abs(i(e).attr("data-slick-index")-o.currentSlide)||1):o.options.slidesToScroll},e.prototype.goTo=e.prototype.slickGoTo=function(i,e){this.changeSlide({data:{message:"index",index:parseInt(i)}},e)},e.prototype.init=function(e){var t=this;i(t.$slider).hasClass("slick-initialized")||(i(t.$slider).addClass("slick-initialized"),t.buildRows(),t.buildOut(),t.setProps(),t.startLoad(),t.loadSlider(),t.initializeEvents(),t.updateArrows(),t.updateDots(),t.checkResponsive(!0),t.focusHandler()),e&&t.$slider.trigger("init",[t]),!0===t.options.accessibility&&t.initADA(),t.options.autoplay&&(t.paused=!1,t.autoPlay())},e.prototype.initADA=function(){var e=this,t=Math.ceil(e.slideCount/e.options.slidesToShow),o=e.getNavigableIndexes().filter(function(i){return i>=0&&i<e.slideCount});e.$slides.add(e.$slideTrack.find(".slick-cloned")).attr({"aria-hidden":"true",tabindex:"-1"}).find("a, input, button, select").attr({tabindex:"-1"}),null!==e.$dots&&(e.$slides.not(e.$slideTrack.find(".slick-cloned")).each(function(t){var s=o.indexOf(t);i(this).attr({role:"tabpanel",id:"slick-slide"+e.instanceUid+t,tabindex:-1}),-1!==s&&i(this).attr({"aria-describedby":"slick-slide-control"+e.instanceUid+s})}),e.$dots.attr("role","tablist").find("li").each(function(s){var n=o[s];i(this).attr({role:"presentation"}),i(this).find("button").first().attr({role:"tab",id:"slick-slide-control"+e.instanceUid+s,"aria-controls":"slick-slide"+e.instanceUid+n,"aria-label":s+1+" of "+t,"aria-selected":null,tabindex:"-1"})}).eq(e.currentSlide).find("button").attr({"aria-selected":"true",tabindex:"0"}).end());for(var s=e.currentSlide,n=s+e.options.slidesToShow;s<n;s++)e.$slides.eq(s).attr("tabindex",0);e.activateADA()},e.prototype.initArrowEvents=function(){var i=this;!0===i.options.arrows&&i.slideCount>i.options.slidesToShow&&(i.$prevArrow.off("click.slick").on("click.slick",{message:"previous"},i.changeSlide),i.$nextArrow.off("click.slick").on("click.slick",{message:"next"},i.changeSlide),!0===i.options.accessibility&&(i.$prevArrow.on("keydown.slick",i.keyHandler),i.$nextArrow.on("keydown.slick",i.keyHandler)))},e.prototype.initDotEvents=function(){var e=this;!0===e.options.dots&&(i("li",e.$dots).on("click.slick",{message:"index"},e.changeSlide),!0===e.options.accessibility&&e.$dots.on("keydown.slick",e.keyHandler)),!0===e.options.dots&&!0===e.options.pauseOnDotsHover&&i("li",e.$dots).on("mouseenter.slick",i.proxy(e.interrupt,e,!0)).on("mouseleave.slick",i.proxy(e.interrupt,e,!1))},e.prototype.initSlideEvents=function(){var e=this;e.options.pauseOnHover&&(e.$list.on("mouseenter.slick",i.proxy(e.interrupt,e,!0)),e.$list.on("mouseleave.slick",i.proxy(e.interrupt,e,!1)))},e.prototype.initializeEvents=function(){var e=this;e.initArrowEvents(),e.initDotEvents(),e.initSlideEvents(),e.$list.on("touchstart.slick mousedown.slick",{action:"start"},e.swipeHandler),e.$list.on("touchmove.slick mousemove.slick",{action:"move"},e.swipeHandler),e.$list.on("touchend.slick mouseup.slick",{action:"end"},e.swipeHandler),e.$list.on("touchcancel.slick mouseleave.slick",{action:"end"},e.swipeHandler),e.$list.on("click.slick",e.clickHandler),i(document).on(e.visibilityChange,i.proxy(e.visibility,e)),!0===e.options.accessibility&&e.$list.on("keydown.slick",e.keyHandler),!0===e.options.focusOnSelect&&i(e.$slideTrack).children().on("click.slick",e.selectHandler),i(window).on("orientationchange.slick.slick-"+e.instanceUid,i.proxy(e.orientationChange,e)),i(window).on("resize.slick.slick-"+e.instanceUid,i.proxy(e.resize,e)),i("[draggable!=true]",e.$slideTrack).on("dragstart",e.preventDefault),i(window).on("load.slick.slick-"+e.instanceUid,e.setPosition),i(e.setPosition)},e.prototype.initUI=function(){var i=this;!0===i.options.arrows&&i.slideCount>i.options.slidesToShow&&(i.$prevArrow.show(),i.$nextArrow.show()),!0===i.options.dots&&i.slideCount>i.options.slidesToShow&&i.$dots.show()},e.prototype.keyHandler=function(i){var e=this;i.target.tagName.match("TEXTAREA|INPUT|SELECT")||(37===i.keyCode&&!0===e.options.accessibility?e.changeSlide({data:{message:!0===e.options.rtl?"next":"previous"}}):39===i.keyCode&&!0===e.options.accessibility&&e.changeSlide({data:{message:!0===e.options.rtl?"previous":"next"}}))},e.prototype.lazyLoad=function(){function e(e){i("img[data-lazy]",e).each(function(){var e=i(this),t=i(this).attr("data-lazy"),o=i(this).attr("data-srcset"),s=i(this).attr("data-sizes")||n.$slider.attr("data-sizes"),r=document.createElement("img");r.onload=function(){e.animate({opacity:0},100,function(){o&&(e.attr("srcset",o),s&&e.attr("sizes",s)),e.attr("src",t).animate({opacity:1},200,function(){e.removeAttr("data-lazy data-srcset data-sizes").removeClass("slick-loading")}),n.$slider.trigger("lazyLoaded",[n,e,t])})},r.onerror=function(){e.removeAttr("data-lazy").removeClass("slick-loading").addClass("slick-lazyload-error"),n.$slider.trigger("lazyLoadError",[n,e,t])},r.src=t})}var t,o,s,n=this;if(!0===n.options.centerMode?!0===n.options.infinite?s=(o=n.currentSlide+(n.options.slidesToShow/2+1))+n.options.slidesToShow+2:(o=Math.max(0,n.currentSlide-(n.options.slidesToShow/2+1)),s=n.options.slidesToShow/2+1+2+n.currentSlide):(o=n.options.infinite?n.options.slidesToShow+n.currentSlide:n.currentSlide,s=Math.ceil(o+n.options.slidesToShow),!0===n.options.fade&&(o>0&&o--,s<=n.slideCount&&s++)),t=n.$slider.find(".slick-slide").slice(o,s),"anticipated"===n.options.lazyLoad)for(var r=o-1,l=s,d=n.$slider.find(".slick-slide"),a=0;a<n.options.slidesToScroll;a++)r<0&&(r=n.slideCount-1),t=(t=t.add(d.eq(r))).add(d.eq(l)),r--,l++;e(t),n.slideCount<=n.options.slidesToShow?e(n.$slider.find(".slick-slide")):n.currentSlide>=n.slideCount-n.options.slidesToShow?e(n.$slider.find(".slick-cloned").slice(0,n.options.slidesToShow)):0===n.currentSlide&&e(n.$slider.find(".slick-cloned").slice(-1*n.options.slidesToShow))},e.prototype.loadSlider=function(){var i=this;i.setPosition(),i.$slideTrack.css({opacity:1}),i.$slider.removeClass("slick-loading"),i.initUI(),"progressive"===i.options.lazyLoad&&i.progressiveLazyLoad()},e.prototype.next=e.prototype.slickNext=function(){this.changeSlide({data:{message:"next"}})},e.prototype.orientationChange=function(){var i=this;i.checkResponsive(),i.setPosition()},e.prototype.pause=e.prototype.slickPause=function(){var i=this;i.autoPlayClear(),i.paused=!0},e.prototype.play=e.prototype.slickPlay=function(){var i=this;i.autoPlay(),i.options.autoplay=!0,i.paused=!1,i.focussed=!1,i.interrupted=!1},e.prototype.postSlide=function(e){var t=this;t.unslicked||(t.$slider.trigger("afterChange",[t,e]),t.animating=!1,t.slideCount>t.options.slidesToShow&&t.setPosition(),t.swipeLeft=null,t.options.autoplay&&t.autoPlay(),!0===t.options.accessibility&&(t.initADA(),t.options.focusOnChange&&i(t.$slides.get(t.currentSlide)).attr("tabindex",0).focus()))},e.prototype.prev=e.prototype.slickPrev=function(){this.changeSlide({data:{message:"previous"}})},e.prototype.preventDefault=function(i){i.preventDefault()},e.prototype.progressiveLazyLoad=function(e){e=e||1;var t,o,s,n,r,l=this,d=i("img[data-lazy]",l.$slider);d.length?(t=d.first(),o=t.attr("data-lazy"),s=t.attr("data-srcset"),n=t.attr("data-sizes")||l.$slider.attr("data-sizes"),(r=document.createElement("img")).onload=function(){s&&(t.attr("srcset",s),n&&t.attr("sizes",n)),t.attr("src",o).removeAttr("data-lazy data-srcset data-sizes").removeClass("slick-loading"),!0===l.options.adaptiveHeight&&l.setPosition(),l.$slider.trigger("lazyLoaded",[l,t,o]),l.progressiveLazyLoad()},r.onerror=function(){e<3?setTimeout(function(){l.progressiveLazyLoad(e+1)},500):(t.removeAttr("data-lazy").removeClass("slick-loading").addClass("slick-lazyload-error"),l.$slider.trigger("lazyLoadError",[l,t,o]),l.progressiveLazyLoad())},r.src=o):l.$slider.trigger("allImagesLoaded",[l])},e.prototype.refresh=function(e){var t,o,s=this;o=s.slideCount-s.options.slidesToShow,!s.options.infinite&&s.currentSlide>o&&(s.currentSlide=o),s.slideCount<=s.options.slidesToShow&&(s.currentSlide=0),t=s.currentSlide,s.destroy(!0),i.extend(s,s.initials,{currentSlide:t}),s.init(),e||s.changeSlide({data:{message:"index",index:t}},!1)},e.prototype.registerBreakpoints=function(){var e,t,o,s=this,n=s.options.responsive||null;if("array"===i.type(n)&&n.length){s.respondTo=s.options.respondTo||"window";for(e in n)if(o=s.breakpoints.length-1,n.hasOwnProperty(e)){for(t=n[e].breakpoint;o>=0;)s.breakpoints[o]&&s.breakpoints[o]===t&&s.breakpoints.splice(o,1),o--;s.breakpoints.push(t),s.breakpointSettings[t]=n[e].settings}s.breakpoints.sort(function(i,e){return s.options.mobileFirst?i-e:e-i})}},e.prototype.reinit=function(){var e=this;e.$slides=e.$slideTrack.children(e.options.slide).addClass("slick-slide"),e.slideCount=e.$slides.length,e.currentSlide>=e.slideCount&&0!==e.currentSlide&&(e.currentSlide=e.currentSlide-e.options.slidesToScroll),e.slideCount<=e.options.slidesToShow&&(e.currentSlide=0),e.registerBreakpoints(),e.setProps(),e.setupInfinite(),e.buildArrows(),e.updateArrows(),e.initArrowEvents(),e.buildDots(),e.updateDots(),e.initDotEvents(),e.cleanUpSlideEvents(),e.initSlideEvents(),e.checkResponsive(!1,!0),!0===e.options.focusOnSelect&&i(e.$slideTrack).children().on("click.slick",e.selectHandler),e.setSlideClasses("number"==typeof e.currentSlide?e.currentSlide:0),e.setPosition(),e.focusHandler(),e.paused=!e.options.autoplay,e.autoPlay(),e.$slider.trigger("reInit",[e])},e.prototype.resize=function(){var e=this;i(window).width()!==e.windowWidth&&(clearTimeout(e.windowDelay),e.windowDelay=window.setTimeout(function(){e.windowWidth=i(window).width(),e.checkResponsive(),e.unslicked||e.setPosition()},50))},e.prototype.removeSlide=e.prototype.slickRemove=function(i,e,t){var o=this;if(i="boolean"==typeof i?!0===(e=i)?0:o.slideCount-1:!0===e?--i:i,o.slideCount<1||i<0||i>o.slideCount-1)return!1;o.unload(),!0===t?o.$slideTrack.children().remove():o.$slideTrack.children(this.options.slide).eq(i).remove(),o.$slides=o.$slideTrack.children(this.options.slide),o.$slideTrack.children(this.options.slide).detach(),o.$slideTrack.append(o.$slides),o.$slidesCache=o.$slides,o.reinit()},e.prototype.setCSS=function(i){var e,t,o=this,s={};!0===o.options.rtl&&(i=-i),e="left"==o.positionProp?Math.ceil(i)+"px":"0px",t="top"==o.positionProp?Math.ceil(i)+"px":"0px",s[o.positionProp]=i,!1===o.transformsEnabled?o.$slideTrack.css(s):(s={},!1===o.cssTransitions?(s[o.animType]="translate("+e+", "+t+")",o.$slideTrack.css(s)):(s[o.animType]="translate3d("+e+", "+t+", 0px)",o.$slideTrack.css(s)))},e.prototype.setDimensions=function(){var i=this;!1===i.options.vertical?!0===i.options.centerMode&&i.$list.css({padding:"0px "+i.options.centerPadding}):(i.$list.height(i.$slides.first().outerHeight(!0)*i.options.slidesToShow),!0===i.options.centerMode&&i.$list.css({padding:i.options.centerPadding+" 0px"})),i.listWidth=i.$list.width(),i.listHeight=i.$list.height(),!1===i.options.vertical&&!1===i.options.variableWidth?(i.slideWidth=Math.ceil(i.listWidth/i.options.slidesToShow),i.$slideTrack.width(Math.ceil(i.slideWidth*i.$slideTrack.children(".slick-slide").length))):!0===i.options.variableWidth?i.$slideTrack.width(5e3*i.slideCount):(i.slideWidth=Math.ceil(i.listWidth),i.$slideTrack.height(Math.ceil(i.$slides.first().outerHeight(!0)*i.$slideTrack.children(".slick-slide").length)));var e=i.$slides.first().outerWidth(!0)-i.$slides.first().width();!1===i.options.variableWidth&&i.$slideTrack.children(".slick-slide").width(i.slideWidth-e)},e.prototype.setFade=function(){var e,t=this;t.$slides.each(function(o,s){e=t.slideWidth*o*-1,!0===t.options.rtl?i(s).css({position:"relative",right:e,top:0,zIndex:t.options.zIndex-2,opacity:0}):i(s).css({position:"relative",left:e,top:0,zIndex:t.options.zIndex-2,opacity:0})}),t.$slides.eq(t.currentSlide).css({zIndex:t.options.zIndex-1,opacity:1})},e.prototype.setHeight=function(){var i=this;if(1===i.options.slidesToShow&&!0===i.options.adaptiveHeight&&!1===i.options.vertical){var e=i.$slides.eq(i.currentSlide).outerHeight(!0);i.$list.css("height",e)}},e.prototype.setOption=e.prototype.slickSetOption=function(){var e,t,o,s,n,r=this,l=!1;if("object"===i.type(arguments[0])?(o=arguments[0],l=arguments[1],n="multiple"):"string"===i.type(arguments[0])&&(o=arguments[0],s=arguments[1],l=arguments[2],"responsive"===arguments[0]&&"array"===i.type(arguments[1])?n="responsive":void 0!==arguments[1]&&(n="single")),"single"===n)r.options[o]=s;else if("multiple"===n)i.each(o,function(i,e){r.options[i]=e});else if("responsive"===n)for(t in s)if("array"!==i.type(r.options.responsive))r.options.responsive=[s[t]];else{for(e=r.options.responsive.length-1;e>=0;)r.options.responsive[e].breakpoint===s[t].breakpoint&&r.options.responsive.splice(e,1),e--;r.options.responsive.push(s[t])}l&&(r.unload(),r.reinit())},e.prototype.setPosition=function(){var i=this;i.setDimensions(),i.setHeight(),!1===i.options.fade?i.setCSS(i.getLeft(i.currentSlide)):i.setFade(),i.$slider.trigger("setPosition",[i])},e.prototype.setProps=function(){var i=this,e=document.body.style;i.positionProp=!0===i.options.vertical?"top":"left","top"===i.positionProp?i.$slider.addClass("slick-vertical"):i.$slider.removeClass("slick-vertical"),void 0===e.WebkitTransition&&void 0===e.MozTransition&&void 0===e.msTransition||!0===i.options.useCSS&&(i.cssTransitions=!0),i.options.fade&&("number"==typeof i.options.zIndex?i.options.zIndex<3&&(i.options.zIndex=3):i.options.zIndex=i.defaults.zIndex),void 0!==e.OTransform&&(i.animType="OTransform",i.transformType="-o-transform",i.transitionType="OTransition",void 0===e.perspectiveProperty&&void 0===e.webkitPerspective&&(i.animType=!1)),void 0!==e.MozTransform&&(i.animType="MozTransform",i.transformType="-moz-transform",i.transitionType="MozTransition",void 0===e.perspectiveProperty&&void 0===e.MozPerspective&&(i.animType=!1)),void 0!==e.webkitTransform&&(i.animType="webkitTransform",i.transformType="-webkit-transform",i.transitionType="webkitTransition",void 0===e.perspectiveProperty&&void 0===e.webkitPerspective&&(i.animType=!1)),void 0!==e.msTransform&&(i.animType="msTransform",i.transformType="-ms-transform",i.transitionType="msTransition",void 0===e.msTransform&&(i.animType=!1)),void 0!==e.transform&&!1!==i.animType&&(i.animType="transform",i.transformType="transform",i.transitionType="transition"),i.transformsEnabled=i.options.useTransform&&null!==i.animType&&!1!==i.animType},e.prototype.setSlideClasses=function(i){var e,t,o,s,n=this;if(t=n.$slider.find(".slick-slide").removeClass("slick-active slick-center slick-current").attr("aria-hidden","true"),n.$slides.eq(i).addClass("slick-current"),!0===n.options.centerMode){var r=n.options.slidesToShow%2==0?1:0;e=Math.floor(n.options.slidesToShow/2),!0===n.options.infinite&&(i>=e&&i<=n.slideCount-1-e?n.$slides.slice(i-e+r,i+e+1).addClass("slick-active").attr("aria-hidden","false"):(o=n.options.slidesToShow+i,t.slice(o-e+1+r,o+e+2).addClass("slick-active").attr("aria-hidden","false")),0===i?t.eq(t.length-1-n.options.slidesToShow).addClass("slick-center"):i===n.slideCount-1&&t.eq(n.options.slidesToShow).addClass("slick-center")),n.$slides.eq(i).addClass("slick-center")}else i>=0&&i<=n.slideCount-n.options.slidesToShow?n.$slides.slice(i,i+n.options.slidesToShow).addClass("slick-active").attr("aria-hidden","false"):t.length<=n.options.slidesToShow?t.addClass("slick-active").attr("aria-hidden","false"):(s=n.slideCount%n.options.slidesToShow,o=!0===n.options.infinite?n.options.slidesToShow+i:i,n.options.slidesToShow==n.options.slidesToScroll&&n.slideCount-i<n.options.slidesToShow?t.slice(o-(n.options.slidesToShow-s),o+s).addClass("slick-active").attr("aria-hidden","false"):t.slice(o,o+n.options.slidesToShow).addClass("slick-active").attr("aria-hidden","false"));"ondemand"!==n.options.lazyLoad&&"anticipated"!==n.options.lazyLoad||n.lazyLoad()},e.prototype.setupInfinite=function(){var e,t,o,s=this;if(!0===s.options.fade&&(s.options.centerMode=!1),!0===s.options.infinite&&!1===s.options.fade&&(t=null,s.slideCount>s.options.slidesToShow)){for(o=!0===s.options.centerMode?s.options.slidesToShow+1:s.options.slidesToShow,e=s.slideCount;e>s.slideCount-o;e-=1)t=e-1,i(s.$slides[t]).clone(!0).attr("id","").attr("data-slick-index",t-s.slideCount).prependTo(s.$slideTrack).addClass("slick-cloned");for(e=0;e<o+s.slideCount;e+=1)t=e,i(s.$slides[t]).clone(!0).attr("id","").attr("data-slick-index",t+s.slideCount).appendTo(s.$slideTrack).addClass("slick-cloned");s.$slideTrack.find(".slick-cloned").find("[id]").each(function(){i(this).attr("id","")})}},e.prototype.interrupt=function(i){var e=this;i||e.autoPlay(),e.interrupted=i},e.prototype.selectHandler=function(e){var t=this,o=i(e.target).is(".slick-slide")?i(e.target):i(e.target).parents(".slick-slide"),s=parseInt(o.attr("data-slick-index"));s||(s=0),t.slideCount<=t.options.slidesToShow?t.slideHandler(s,!1,!0):t.slideHandler(s)},e.prototype.slideHandler=function(i,e,t){var o,s,n,r,l,d=null,a=this;if(e=e||!1,!(!0===a.animating&&!0===a.options.waitForAnimate||!0===a.options.fade&&a.currentSlide===i))if(!1===e&&a.asNavFor(i),o=i,d=a.getLeft(o),r=a.getLeft(a.currentSlide),a.currentLeft=null===a.swipeLeft?r:a.swipeLeft,!1===a.options.infinite&&!1===a.options.centerMode&&(i<0||i>a.getDotCount()*a.options.slidesToScroll))!1===a.options.fade&&(o=a.currentSlide,!0!==t?a.animateSlide(r,function(){a.postSlide(o)}):a.postSlide(o));else if(!1===a.options.infinite&&!0===a.options.centerMode&&(i<0||i>a.slideCount-a.options.slidesToScroll))!1===a.options.fade&&(o=a.currentSlide,!0!==t?a.animateSlide(r,function(){a.postSlide(o)}):a.postSlide(o));else{if(a.options.autoplay&&clearInterval(a.autoPlayTimer),s=o<0?a.slideCount%a.options.slidesToScroll!=0?a.slideCount-a.slideCount%a.options.slidesToScroll:a.slideCount+o:o>=a.slideCount?a.slideCount%a.options.slidesToScroll!=0?0:o-a.slideCount:o,a.animating=!0,a.$slider.trigger("beforeChange",[a,a.currentSlide,s]),n=a.currentSlide,a.currentSlide=s,a.setSlideClasses(a.currentSlide),a.options.asNavFor&&(l=(l=a.getNavTarget()).slick("getSlick")).slideCount<=l.options.slidesToShow&&l.setSlideClasses(a.currentSlide),a.updateDots(),a.updateArrows(),!0===a.options.fade)return!0!==t?(a.fadeSlideOut(n),a.fadeSlide(s,function(){a.postSlide(s)})):a.postSlide(s),void a.animateHeight();!0!==t?a.animateSlide(d,function(){a.postSlide(s)}):a.postSlide(s)}},e.prototype.startLoad=function(){var i=this;!0===i.options.arrows&&i.slideCount>i.options.slidesToShow&&(i.$prevArrow.hide(),i.$nextArrow.hide()),!0===i.options.dots&&i.slideCount>i.options.slidesToShow&&i.$dots.hide(),i.$slider.addClass("slick-loading")},e.prototype.swipeDirection=function(){var i,e,t,o,s=this;return i=s.touchObject.startX-s.touchObject.curX,e=s.touchObject.startY-s.touchObject.curY,t=Math.atan2(e,i),(o=Math.round(180*t/Math.PI))<0&&(o=360-Math.abs(o)),o<=45&&o>=0?!1===s.options.rtl?"left":"right":o<=360&&o>=315?!1===s.options.rtl?"left":"right":o>=135&&o<=225?!1===s.options.rtl?"right":"left":!0===s.options.verticalSwiping?o>=35&&o<=135?"down":"up":"vertical"},e.prototype.swipeEnd=function(i){var e,t,o=this;if(o.dragging=!1,o.swiping=!1,o.scrolling)return o.scrolling=!1,!1;if(o.interrupted=!1,o.shouldClick=!(o.touchObject.swipeLength>10),void 0===o.touchObject.curX)return!1;if(!0===o.touchObject.edgeHit&&o.$slider.trigger("edge",[o,o.swipeDirection()]),o.touchObject.swipeLength>=o.touchObject.minSwipe){switch(t=o.swipeDirection()){case"left":case"down":e=o.options.swipeToSlide?o.checkNavigable(o.currentSlide+o.getSlideCount()):o.currentSlide+o.getSlideCount(),o.currentDirection=0;break;case"right":case"up":e=o.options.swipeToSlide?o.checkNavigable(o.currentSlide-o.getSlideCount()):o.currentSlide-o.getSlideCount(),o.currentDirection=1}"vertical"!=t&&(o.slideHandler(e),o.touchObject={},o.$slider.trigger("swipe",[o,t]))}else o.touchObject.startX!==o.touchObject.curX&&(o.slideHandler(o.currentSlide),o.touchObject={})},e.prototype.swipeHandler=function(i){var e=this;if(!(!1===e.options.swipe||"ontouchend"in document&&!1===e.options.swipe||!1===e.options.draggable&&-1!==i.type.indexOf("mouse")))switch(e.touchObject.fingerCount=i.originalEvent&&void 0!==i.originalEvent.touches?i.originalEvent.touches.length:1,e.touchObject.minSwipe=e.listWidth/e.options.touchThreshold,!0===e.options.verticalSwiping&&(e.touchObject.minSwipe=e.listHeight/e.options.touchThreshold),i.data.action){case"start":e.swipeStart(i);break;case"move":e.swipeMove(i);break;case"end":e.swipeEnd(i)}},e.prototype.swipeMove=function(i){var e,t,o,s,n,r,l=this;return n=void 0!==i.originalEvent?i.originalEvent.touches:null,!(!l.dragging||l.scrolling||n&&1!==n.length)&&(e=l.getLeft(l.currentSlide),l.touchObject.curX=void 0!==n?n[0].pageX:i.clientX,l.touchObject.curY=void 0!==n?n[0].pageY:i.clientY,l.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(l.touchObject.curX-l.touchObject.startX,2))),r=Math.round(Math.sqrt(Math.pow(l.touchObject.curY-l.touchObject.startY,2))),!l.options.verticalSwiping&&!l.swiping&&r>4?(l.scrolling=!0,!1):(!0===l.options.verticalSwiping&&(l.touchObject.swipeLength=r),t=l.swipeDirection(),void 0!==i.originalEvent&&l.touchObject.swipeLength>4&&(l.swiping=!0,i.preventDefault()),s=(!1===l.options.rtl?1:-1)*(l.touchObject.curX>l.touchObject.startX?1:-1),!0===l.options.verticalSwiping&&(s=l.touchObject.curY>l.touchObject.startY?1:-1),o=l.touchObject.swipeLength,l.touchObject.edgeHit=!1,!1===l.options.infinite&&(0===l.currentSlide&&"right"===t||l.currentSlide>=l.getDotCount()&&"left"===t)&&(o=l.touchObject.swipeLength*l.options.edgeFriction,l.touchObject.edgeHit=!0),!1===l.options.vertical?l.swipeLeft=e+o*s:l.swipeLeft=e+o*(l.$list.height()/l.listWidth)*s,!0===l.options.verticalSwiping&&(l.swipeLeft=e+o*s),!0!==l.options.fade&&!1!==l.options.touchMove&&(!0===l.animating?(l.swipeLeft=null,!1):void l.setCSS(l.swipeLeft))))},e.prototype.swipeStart=function(i){var e,t=this;if(t.interrupted=!0,1!==t.touchObject.fingerCount||t.slideCount<=t.options.slidesToShow)return t.touchObject={},!1;void 0!==i.originalEvent&&void 0!==i.originalEvent.touches&&(e=i.originalEvent.touches[0]),t.touchObject.startX=t.touchObject.curX=void 0!==e?e.pageX:i.clientX,t.touchObject.startY=t.touchObject.curY=void 0!==e?e.pageY:i.clientY,t.dragging=!0},e.prototype.unfilterSlides=e.prototype.slickUnfilter=function(){var i=this;null!==i.$slidesCache&&(i.unload(),i.$slideTrack.children(this.options.slide).detach(),i.$slidesCache.appendTo(i.$slideTrack),i.reinit())},e.prototype.unload=function(){var e=this;i(".slick-cloned",e.$slider).remove(),e.$dots&&e.$dots.remove(),e.$prevArrow&&e.htmlExpr.test(e.options.prevArrow)&&e.$prevArrow.remove(),e.$nextArrow&&e.htmlExpr.test(e.options.nextArrow)&&e.$nextArrow.remove(),e.$slides.removeClass("slick-slide slick-active slick-visible slick-current").attr("aria-hidden","true").css("width","")},e.prototype.unslick=function(i){var e=this;e.$slider.trigger("unslick",[e,i]),e.destroy()},e.prototype.updateArrows=function(){var i=this;Math.floor(i.options.slidesToShow/2),!0===i.options.arrows&&i.slideCount>i.options.slidesToShow&&!i.options.infinite&&(i.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false"),i.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false"),0===i.currentSlide?(i.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true"),i.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false")):i.currentSlide>=i.slideCount-i.options.slidesToShow&&!1===i.options.centerMode?(i.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),i.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")):i.currentSlide>=i.slideCount-1&&!0===i.options.centerMode&&(i.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),i.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")))},e.prototype.updateDots=function(){var i=this;null!==i.$dots&&(i.$dots.find("li").removeClass("slick-active").end(),i.$dots.find("li").eq(Math.floor(i.currentSlide/i.options.slidesToScroll)).addClass("slick-active"))},e.prototype.visibility=function(){var i=this;i.options.autoplay&&(document[i.hidden]?i.interrupted=!0:i.interrupted=!1)},i.fn.slick=function(){var i,t,o=this,s=arguments[0],n=Array.prototype.slice.call(arguments,1),r=o.length;for(i=0;i<r;i++)if("object"==typeof s||void 0===s?o[i].slick=new e(o[i],s):t=o[i].slick[s].apply(o[i].slick,n),void 0!==t)return t;return o}});
